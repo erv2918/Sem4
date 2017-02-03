@@ -23,11 +23,11 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblFiguras = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxFiguras = New System.Windows.Forms.ComboBox()
         Me.lblDato1 = New System.Windows.Forms.Label()
         Me.lblDato2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDato1 = New System.Windows.Forms.TextBox()
+        Me.txtDato2 = New System.Windows.Forms.TextBox()
         Me.btnCalcular = New System.Windows.Forms.Button()
         Me.txtCalcular = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -41,14 +41,14 @@ Partial Class Form1
         Me.lblFiguras.TabIndex = 0
         Me.lblFiguras.Text = "Seleccione la figura a Calcular"
         '
-        'ComboBox1
+        'cbxFiguras
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Cuadrado", "Rectangulo", "Triangulo", "Paralelogramo"})
-        Me.ComboBox1.Location = New System.Drawing.Point(37, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.cbxFiguras.FormattingEnabled = True
+        Me.cbxFiguras.Items.AddRange(New Object() {"Cuadrado", "Rectangulo", "Triangulo", "Paralelogramo"})
+        Me.cbxFiguras.Location = New System.Drawing.Point(37, 36)
+        Me.cbxFiguras.Name = "cbxFiguras"
+        Me.cbxFiguras.Size = New System.Drawing.Size(121, 21)
+        Me.cbxFiguras.TabIndex = 1
         '
         'lblDato1
         '
@@ -58,6 +58,7 @@ Partial Class Form1
         Me.lblDato1.Size = New System.Drawing.Size(36, 13)
         Me.lblDato1.TabIndex = 2
         Me.lblDato1.Text = "Dato1"
+        Me.lblDato1.Visible = False
         '
         'lblDato2
         '
@@ -67,20 +68,23 @@ Partial Class Form1
         Me.lblDato2.Size = New System.Drawing.Size(36, 13)
         Me.lblDato2.TabIndex = 3
         Me.lblDato2.Text = "Dato2"
+        Me.lblDato2.Visible = False
         '
-        'TextBox1
+        'txtDato1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 125)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.txtDato1.Location = New System.Drawing.Point(12, 125)
+        Me.txtDato1.Name = "txtDato1"
+        Me.txtDato1.Size = New System.Drawing.Size(100, 20)
+        Me.txtDato1.TabIndex = 4
+        Me.txtDato1.Visible = False
         '
-        'TextBox2
+        'txtDato2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(149, 125)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.txtDato2.Location = New System.Drawing.Point(149, 125)
+        Me.txtDato2.Name = "txtDato2"
+        Me.txtDato2.Size = New System.Drawing.Size(100, 20)
+        Me.txtDato2.TabIndex = 5
+        Me.txtDato2.Visible = False
         '
         'btnCalcular
         '
@@ -93,9 +97,9 @@ Partial Class Form1
         '
         'txtCalcular
         '
-        Me.txtCalcular.Location = New System.Drawing.Point(70, 218)
+        Me.txtCalcular.Location = New System.Drawing.Point(12, 218)
         Me.txtCalcular.Name = "txtCalcular"
-        Me.txtCalcular.Size = New System.Drawing.Size(101, 20)
+        Me.txtCalcular.Size = New System.Drawing.Size(237, 20)
         Me.txtCalcular.TabIndex = 7
         '
         'Form1
@@ -105,11 +109,11 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.txtCalcular)
         Me.Controls.Add(Me.btnCalcular)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtDato2)
+        Me.Controls.Add(Me.txtDato1)
         Me.Controls.Add(Me.lblDato2)
         Me.Controls.Add(Me.lblDato1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxFiguras)
         Me.Controls.Add(Me.lblFiguras)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -119,11 +123,11 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents lblFiguras As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxFiguras As ComboBox
     Friend WithEvents lblDato1 As Label
     Friend WithEvents lblDato2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtDato1 As TextBox
+    Friend WithEvents txtDato2 As TextBox
     Friend WithEvents btnCalcular As Button
     Friend WithEvents txtCalcular As TextBox
 End Class
